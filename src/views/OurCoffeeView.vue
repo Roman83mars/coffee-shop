@@ -69,12 +69,48 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              <ProductCard
+                classItem="shop__item"
+                :name="coffee[0].name"
+                :price="coffee[0].price"
+                :image="coffee[0].image"
+                :country="coffee[0].country"
+              />
+              <ProductCard
+                classItem="shop__item"
+                :name="coffee[1].name"
+                :price="coffee[1].price"
+                :image="coffee[1].image"
+                :country="coffee[1].country"
+              />
+              <ProductCard
+                classItem="shop__item"
+                :name="coffee[2].name"
+                :price="coffee[2].price"
+                :image="coffee[2].image"
+                :country="coffee[2].country"
+              />
+              <ProductCard
+                classItem="shop__item"
+                :name="coffee[3].name"
+                :price="coffee[3].price"
+                :image="coffee[3].image"
+                :country="coffee[3].country"
+              />
+              <ProductCard
+                classItem="shop__item"
+                :name="coffee[4].name"
+                :price="coffee[4].price"
+                :image="coffee[4].image"
+                :country="coffee[4].country"
+              />
+              <ProductCard
+                classItem="shop__item"
+                :name="coffee[5].name"
+                :price="coffee[5].price"
+                :image="coffee[5].image"
+                :country="coffee[5].country"
+              />
             </div>
           </div>
         </div>
@@ -95,42 +131,42 @@ export default {
           id: 0,
           name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
+          price: 10.73,
           image: "good-1.jpg",
         },
         {
           id: 1,
           name: "Presto Coffee Beans 1kg",
           country: "Brazil",
-          price: "15.99$",
+          price: 15.99,
           image: "good-1.jpg",
         },
         {
           id: 2,
           name: "AROMISTICO Coffee 1kg",
           country: "Brazil",
-          price: "6.99$",
+          price: 6.99,
           image: "good-1.jpg",
         },
         {
           id: 3,
           name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
+          price: 10.73,
           image: "good-1.jpg",
         },
         {
           id: 4,
           name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
+          price: 10.73,
           image: "good-1.jpg",
         },
         {
           id: 5,
           name: "Solimo Coffee Beans 2kg",
           country: "Brazil",
-          price: "10.73$",
+          price: 10.73,
           image: "good-1.jpg",
         },
       ],

@@ -19,7 +19,9 @@
               We makes every day full of energy and taste
             </div>
             <div class="preview__subtitle">Want to try our beans?</div>
-            <a href="./coffeepage.html" class="preview__btn">More</a>
+            <router-link class="preview__btn" :to="links[0].link">{{
+              links[0].text
+            }}</router-link>
           </div>
         </div>
       </div>
@@ -59,9 +61,24 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
-              <ProductCard />
-              <ProductCard />
-              <ProductCard />
+              <ProductCard
+                classItem="best__item"
+                :name="bestsellers[0].name"
+                :price="bestsellers[0].price"
+                :image="bestsellers[0].image"
+              />
+              <ProductCard
+                classItem="best__item"
+                :name="bestsellers[1].name"
+                :price="bestsellers[1].price"
+                :image="bestsellers[1].image"
+              />
+              <ProductCard
+                classItem="best__item"
+                :name="bestsellers[2].name"
+                :price="bestsellers[2].price"
+                :image="bestsellers[2].image"
+              />
             </div>
           </div>
         </div>
@@ -77,23 +94,30 @@ export default {
   components: { NavBarComponent, ProductCard },
   data() {
     return {
+      links: [
+        {
+          id: 0,
+          text: "More",
+          link: "/our-coffee",
+        },
+      ],
       bestsellers: [
         {
           id: 0,
           name: "Solimo Coffee Beans 2kg",
-          price: "10.73$",
+          price: 10.73,
           image: "coffee-1.jpg",
         },
         {
           id: 1,
           name: "Presto Coffee Beans 1kg",
-          price: "15.99$",
+          price: 15.99,
           image: "coffee-2.jpg",
         },
         {
           id: 2,
           name: "AROMISTICO Coffee 1kg",
-          price: "6.99$",
+          price: 6.99,
           image: "coffee-3.jpg",
         },
       ],
