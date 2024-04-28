@@ -49,46 +49,13 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
               <ProductCard
+                v-for="good in goods"
+                :key="good.id"
                 classItem="shop__item"
-                :name="goods[0].name"
-                :price="goods[0].price"
-                :image="goods[0].image"
-                :country="goods[0].country"
-              />
-              <ProductCard
-                classItem="shop__item"
-                :name="goods[1].name"
-                :price="goods[1].price"
-                :image="goods[1].image"
-                :country="goods[1].country"
-              />
-              <ProductCard
-                classItem="shop__item"
-                :name="goods[2].name"
-                :price="goods[2].price"
-                :image="goods[2].image"
-                :country="goods[2].country"
-              />
-              <ProductCard
-                classItem="shop__item"
-                :name="goods[3].name"
-                :price="goods[3].price"
-                :image="goods[3].image"
-                :country="goods[3].country"
-              />
-              <ProductCard
-                classItem="shop__item"
-                :name="goods[4].name"
-                :price="goods[4].price"
-                :image="goods[4].image"
-                :country="goods[4].country"
-              />
-              <ProductCard
-                classItem="shop__item"
-                :name="goods[5].name"
-                :price="goods[5].price"
-                :image="goods[5].image"
-                :country="goods[5].country"
+                :name="good.name"
+                :price="good.price"
+                :image="good.image"
+                :country="good.country"
               />
             </div>
           </div>
