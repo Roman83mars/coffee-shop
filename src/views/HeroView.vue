@@ -19,9 +19,15 @@
               We makes every day full of energy and taste
             </div>
             <div class="preview__subtitle">Want to try our beans?</div>
-            <router-link class="preview__btn" :to="links[0].link">{{
+            <a
+              href="./coffeepage.html"
+              class="preview__btn"
+              @click.prevent="smoothScroll"
+              >More</a
+            >
+            <!-- <router-link class="preview__btn" :to="links[0].link">{{
               links[0].text
-            }}</router-link>
+            }}</router-link> -->
           </div>
         </div>
       </div>
@@ -57,17 +63,17 @@
     </section>
     <section class="best">
       <div class="container">
-        <div class="title">Our best</div>
+        <div class="title" ref="ourBest">Our best</div>
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
               <ProductCard
-                v-for="bestseller in bestsellers"
-                :key="bestseller.id"
+                v-for="card in bestsellers"
+                :key="card.id"
                 classItem="best__item"
-                :name="bestseller.name"
-                :price="bestseller.price"
-                :image="bestseller.image"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
               />
             </div>
           </div>
@@ -80,6 +86,7 @@
 <script>
 import NavBarComponent from "@/components/NavBarComponent.vue";
 import ProductCard from "@/components/ProductCard.vue";
+import { scrollIntoView } from "seamless-scroll-polyfill";
 export default {
   components: { NavBarComponent, ProductCard },
   data() {
@@ -112,6 +119,14 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    smoothScroll() {
+      scrollIntoView(this.$refs.ourBest, {
+        behavior: "smooth",
+        block: "start",
+      });
+    },
   },
 };
 </script>
