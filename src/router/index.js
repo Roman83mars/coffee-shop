@@ -6,6 +6,7 @@ import OurCoffeeView from '../views/OurCoffeeView'
 import ForYourPleasureView from '../views/ForYourPleasureView'
 import ContactUsView from '../views/ContactUsView'
 import ThankYouView from '../views/ThankYouView'
+import GoodsItemView from '../views/GoodsItemView'
 
 Vue.use(VueRouter)
 
@@ -15,6 +16,8 @@ const routes = [
     { path: '/for-your-pleasure', component: ForYourPleasureView },
     { path: '/contact-us', component: ContactUsView },
     { path: '/thank-you', component: ThankYouView },
+    { name: 'coffee', path: '/our-coffee/:id', component: GoodsItemView },
+    { name: 'goods', path: '/for-your-pleasure/:id', component: GoodsItemView },
 ]
 
 const router = new VueRouter({
