@@ -172,7 +172,6 @@ export default {
     async submit() {
       const isFormCorrect = await this.v$.$validate();
       if (!isFormCorrect) return;
-
       const message = {
         name: this.name,
         email: this.email,
@@ -186,6 +185,10 @@ export default {
         },
         body: JSON.stringify(message),
       });
+      this.name = "";
+      this.email = "";
+      this.phone = "";
+      this.message = "";
     },
   },
 };
